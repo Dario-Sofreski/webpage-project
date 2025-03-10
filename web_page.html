@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            background-color: lightblue;
+            padding: 10px;
+        }
+        
+        p {
+            margin: 0;
+            padding: 10px;
+            color: grey;
+        }
+
+        .Order {
+            text-align: left;
+            background-color: lightblue;
+        }
+
+
+
+        .personal {
+            display: flex;
+            flex-direction: column;
+            float: left;;
+            padding: 10px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 5px grey;
+            justify-content: space-between;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+
+        .ski {
+            display: flex;
+            flex-direction: column;
+            float: left;
+            padding: 10px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 5px grey;
+            margin-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        .experience {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            width: 75px;
+            text-align: center;
+            float: left;
+            margin: 5px;
+        }
+
+        .extras {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            background-color: white;
+            border: none;
+            border-radius: 10px;
+            width: 75px;
+            text-align: center;
+            float: left;
+            margin: 5px;
+        }
+
+        .message {
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+            width: 400px;
+            clear: both;
+            margin-top: 10px;
+        }
+
+
+        .form {
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+            width: fit-content;
+            clear: both;
+            margin-top: 10px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 10px 10px 5px grey;
+            padding: 5px 10px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        .about {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            background-color: lightblue;
+            border-radius: 10px;
+            width: 200px;
+        }
+
+        .contacts {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            background-color: lightblue;
+            border: none;
+            border-radius: 10px;
+            width: 200px;
+        }
+        .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            justify-content: space-around;
+            background-color: lightblue;
+            padding: 20px;
+            margin-top: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .footer-text {
+            font-weight: bold;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        @media screen and (max-width: 600px) {
+          .menu{
+            background-color: lightblue;
+            flex-direction: column;
+            text-align: center;
+          }
+
+          .row {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .map {
+            display: none;
+          }
+            
+          .personal, .ski {
+            width: 100%;    
+            margin: auto;
+            float: none;     
+         }
+
+         .message, .form {
+            width: 100%;
+            margin: auto;
+         }
+
+         .map {
+            display: none;
+         }
+
+         .footer {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+         }
+        }
+
+    </style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+</head>
+<body>
+
+<hr>
+<head>
+	<div class="menu"><p>Home</p>
+        <p>Catalogue</p>
+        <p>See more...</p>
+        <p>Contacts</p>
+    </div>
+</head>
+<hr>
+
+<h2 class="Order" id="Order">Order</h2>
+
+<form action="/action_page.php" method="get">
+    
+    <div class="personal">
+    <fieldset style="height: 300px;">
+        <legend>Order Information:</legend>
+        
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">e-mail:</label><br>
+		    <input type="email" id="email" name="email"><br>
+            <label for="date">Date of birth:</label><br>
+            <input type="date" id="date" name="date"><br>
+            
+            <label for="gender" style="margin-top: 15px;">Gender:</label>
+            <select id="gender" name="gender" style="margin-top: 15px;">
+                <option value="male">male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+    </fieldset>
+
+        <div class="ski">
+        <fieldset style="height: 284px;">
+            <legend>Ski:</legend>
+            <label for="security-code">Security code:</label><br>
+            <input type="password" id="security-code" name="security-code" placeholder="123456789" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[*_])[A-Za-z\d*_]{6,9}"><br>
+            <label for="color">color:</label>
+            <input type="color" id="color" name="color" style="margin-top: 20px;"><br>
+
+            <div class="experience">
+                <label for="experience">Experience:</label>
+                <input type="radio" id="beginner" name="experience" value="beginner">
+                <label for="beginner">Beginner</label>
+                <input type="radio" id="advanced" name="experience" value="advanced">
+                <label for="advanced">Advanced</label>
+                <br>
+            </div>
+            <div class="extras">
+                <label for="Extras">Extra:</label>
+                <input type="checkbox" id="check1" name="check1" value="Gloves">
+                <label for="check1">Gloves</label>
+                <input type="checkbox" id="check2" name="check2" value="Scarf">
+                <label for="check2">Scarf</label>
+                <input type="checkbox" id="check3" name="check3" value="Ski Poles">
+                <label for="check3">Ski Poles</label>
+            </div>
+        </div>
+        </fieldset>
+    </fieldset>
+    </div>
+    <br>
+
+    <fieldset class="message">
+        <legend>Send Message:</legend>
+    
+            <label for="message">Message:</label><br>  	
+            <textarea name="message" rows="10" cols="30" placeholder="Enter additional info here."></textarea><br>
+
+            <div class="form">
+                <label class="file" for="receipt">
+                    If you have already paid, attach your receipt:
+                </label>
+                <br>
+                <input type="file" id="receipt" name="receipt">
+                <br>
+                
+                <div class="buttons" >
+                    <button type="submit">Submit</button>
+                    <button type="reset">Delete data</button>
+                </div>
+            </div>
+        </fieldset>
+        <br>
+
+        <a href="#Order"><h3>Back</h3></a>
+        <hr>
+
+        <footer>
+            <div class="footer">
+                <div class="row">
+            <div class="about">
+                <h4>About us</h4>
+
+                <p>We are the best shop in town!</p>
+                <p>If you want to buy or rent skis</p>
+                <p>please contact us</p>
+            </div>
+
+            <div class="contacts">
+                <h4>Contacts</h4>
+
+                <p>Phone: 123456789</p>
+                <p>e-mail:koper@mail.com</p>
+                <p>We also have telegram</p>
+            </div>
+
+            <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.066753799648!2d13.725059712194348!3d45.54898267095484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477b689587ef915f%3A0xff290ab83152d9dd!2sThe%20Faculty%20of%20Mathematics%2C%20Natural%20Sciences%20and%20Information%20Technologies!5e0!3m2!1sen!2ssi!4v1741478317929!5m2!1sen!2ssi" width="300px" height="200px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+                </div>
+            <div class="footer-text">
+            <h4>Koper, Slovenia, University of Primorska, FAMNIT, CPII 2025</h4>
+            </div>
+        </footer>
+    </div>
+</form>
+</html>

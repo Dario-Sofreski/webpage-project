@@ -149,7 +149,7 @@
             flex-direction: row;
         }
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 768px) {
           .menu{
             background-color: lightblue;
             flex-direction: column;
@@ -233,7 +233,7 @@
         <fieldset style="height: 284px;">
             <legend>Ski:</legend>
             <label for="security-code">Security code:</label><br>
-            <input type="password" id="security-code" name="security-code" placeholder="123456789" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[*_])[A-Za-z\d*_]{6,9}"><br>
+            <input type="password" id="security-code" name="security-code" placeholder="123456789" title="Enter 6-9 characters with atleast one lowercase & one uppercase letter, one number and either '*' or '_'" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[*_])[A-Za-z\d*_]{6,9}"><br>
             <label for="color">color:</label>
             <input type="color" id="color" name="color" style="margin-top: 20px;"><br>
 
